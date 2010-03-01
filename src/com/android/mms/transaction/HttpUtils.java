@@ -31,10 +31,7 @@ import org.apache.http.params.HttpConnectionParams;
 
 import com.android.mms.MmsConfig;
 import com.android.mms.LogTag;
-import com.android.mms.R;
-import com.android.mms.ui.MessagingPreferenceActivity;
-import android.preference.PreferenceManager;
-import android.content.SharedPreferences;
+
 import android.content.Context;
 import android.net.http.AndroidHttpClient;
 import android.telephony.TelephonyManager;
@@ -75,8 +72,6 @@ public class HttpUtils {
     private static final String HDR_VALUE_ACCEPT =
         "*/*, application/vnd.wap.mms-message, application/vnd.wap.sic";
 
-    private static String mUserAgent;
-
     private HttpUtils() {
         // To forbidden instantiate this class.
     }
@@ -109,7 +104,6 @@ public class HttpUtils {
                     + ((method == HTTP_POST_METHOD) ? "POST"
                             : ((method == HTTP_GET_METHOD) ? "GET" : "UNKNOWN")));
             Log.v(TAG, "\tisProxySet\t= " + isProxySet);
-            Log.v(TAG, "\tUser-Agent\t\t=" + mUserAgent);
             Log.v(TAG, "\tproxyHost\t= " + proxyHost);
             Log.v(TAG, "\tproxyPort\t= " + proxyPort);
             // TODO Print out binary data more readable.
@@ -260,15 +254,8 @@ public class HttpUtils {
     }
 
     private static AndroidHttpClient createHttpClient() {
-
-        // Get Shared Preferences and User Defined User Agent for MMS
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        mUserAgent = prefs.getString(MessagingPreferenceActivity.USER_AGENT, context.getString(R.string.pref_key_mms_user_agent_default));
-        if (mUserAgent.equals("custom")) {
-            mUserAgent = prefs.getString(MessagingPreferenceActivity.USER_AGENT_CUSTOM, context.getString(R.string.pref_key_mms_user_agent_default));
-        }
-
-        AndroidHttpClient client = AndroidHttpClient.newInstance(mUserAgent);
+        String userAgent = MmsConfig.getUserAgent();
+        AndroidHttpClient client = AndroidHttpClient.newInstance(userAgent);
         HttpParams params = client.getParams();
         HttpProtocolParams.setContentCharset(params, "UTF-8");
 
