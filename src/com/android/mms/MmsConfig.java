@@ -36,15 +36,15 @@ public class MmsConfig {
     private static final String DEFAULT_HTTP_KEY_X_WAP_PROFILE = "x-wap-profile";
     private static final String DEFAULT_USER_AGENT = "Android-Mms/2.0";
 
-    private static final int MAX_IMAGE_HEIGHT = 480;
-    private static final int MAX_IMAGE_WIDTH = 640;
+    private static final int MAX_IMAGE_HEIGHT = 2048;
+    private static final int MAX_IMAGE_WIDTH = 1536;
 
     /**
      * Whether to hide MMS functionality from the user (i.e. SMS only).
      */
     private static boolean mTransIdEnabled = false;
     private static int mMmsEnabled = 1;                         // default to true
-    private static int mMaxMessageSize = 300 * 1024;            // default to 300k max size
+    private static int mMaxMessageSize = 600 * 1024;            // default to 300k max size
     private static String mUserAgent = DEFAULT_USER_AGENT;
     private static String mUaProfTagName = DEFAULT_HTTP_KEY_X_WAP_PROFILE;
     private static String mUaProfUrl = null;
@@ -58,7 +58,7 @@ public class MmsConfig {
     private static int mDefaultMMSMessagesPerThread = 20;       // default value
     private static int mMinMessageCountPerThread = 2;           // default value
     private static int mMaxMessageCountPerThread = 5000;        // default value
-    private static int mSmsToMmsTextThreshold = 4;              // default value
+    private static int mSmsToMmsTextThreshold = 10;              // default value
     private static int mHttpSocketTimeout = 60*1000;            // default to 1 min
     private static int mMinimumSlideElementDuration = 7;        // default to 7 sec
     private static boolean mNotifyWapMMSC = false;
