@@ -239,6 +239,8 @@ public class ComposeMessageActivity extends Activity
     private boolean mIsKeyboardOpen;             // Whether the hardware keyboard is visible
     private boolean mIsLandscape;                // Whether we're in landscape mode
 
+    private boolean mBackToAllThreads;           // Always return to all threads list
+
     private boolean mPossiblePendingNotification;   // If the message list has changed, we may have
                                                     // a pending notification to deal with.
 
@@ -1631,6 +1633,8 @@ public class ComposeMessageActivity extends Activity
         } else {
             setContentView(R.layout.compose_message_activity_black);
         }
+        mBackToAllThreads = prefs.getBoolean(MessagingPreferenceActivity.BACK_TO_ALL_THREADS, false);
+
         setProgressBarVisibility(false);
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE |
@@ -2011,6 +2015,10 @@ public class ComposeMessageActivity extends Activity
                         finish();
                     }
                 });
+                // Always return to all threads
+                if (mBackToAllThreads) {
+                    goToConversationList();
+                }
                 return true;
         }
 

@@ -392,8 +392,9 @@ public class MessagingNotification {
             // default color is green: 0xff00ff00
             int mLedColor = Color.parseColor(sp.getString(MessagingPreferenceActivity.NOTIFICATION_LED_COLOR, "green"));
             notification.ledARGB = mLedColor;
+            int mLedBlinkRate = Integer.parseInt(sp.getString(MessagingPreferenceActivity.NOTIFICATION_LED_BLINK_RATE, "2"));
             notification.ledOnMS = 500;
-            notification.ledOffMS = 2000;
+            notification.ledOffMS = mLedBlinkRate * 1000;
         }
 
         NotificationManager nm = (NotificationManager)

@@ -55,11 +55,15 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
     public static final String SEND_ON_ENTER            = "pref_key_mms_send_on_enter";
     public static final String NOTIFICATION_LED         = "pref_key_mms_notification_led";
     public static final String NOTIFICATION_LED_COLOR   = "pref_key_mms_notification_led_color";
+    public static final String NOTIFICATION_LED_BLINK_RATE = "pref_key_mms_notification_led_blink_rate";
     public static final String NOTIFICATION_VIBRATE_PATTERN = "pref_key_mms_notification_vibrate_pattern";
-	public static final String BLACK_BACKGROUND      = "pref_key_mms_black_background";
-	public static final String CONVERSATION_FONT_SIZE      = "pref_key_mms_conversation_font_size";
-	public static final String CONVERSATION_HIDE_NAMES = "pref_key_conversation_hide_names";
-	public static final String CONVERSATION_LEFT_RIGHT = "pref_key_conversation_left_right";
+    public static final String BLACK_BACKGROUND      = "pref_key_mms_black_background";
+    public static final String CONVERSATION_FONT_SIZE      = "pref_key_mms_conversation_font_size";
+    public static final String CONVERSATION_HIDE_NAMES = "pref_key_conversation_hide_names";
+    public static final String CONVERSATION_LEFT_RIGHT = "pref_key_conversation_left_right";
+    public static final String BACK_TO_ALL_THREADS     = "pref_key_mms_back_to_all_threads";
+    public static final String USER_AGENT                   = "pref_key_mms_user_agent";
+    public static final String USER_AGENT_CUSTOM            = "pref_key_mms_user_agent_custom";
 
     // Menu entries
     private static final int MENU_RESTORE_DEFAULTS    = 1;

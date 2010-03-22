@@ -53,4 +53,33 @@
     <item msgid="6334637439528489607">"Lachen"</item>
     <item msgid="7602915122893958066">"Verwirrt"</item>
   </string-array>
+
+  <string-array name="pref_mms_notification_led_color_entries">
+    <item>@string/pref_mms_notification_led_color_green</item>
+    <item>@string/pref_mms_notification_led_color_white</item>
+    <item>@string/pref_mms_notification_led_color_red</item>
+    <item>@string/pref_mms_notification_led_color_blue</item>
+    <item>@string/pref_mms_notification_led_color_yellow</item>
+    <item>@string/pref_mms_notification_led_color_cyan</item>
+    <item>@string/pref_mms_notification_led_color_magenta</item>
+    <item>@string/pref_mms_notification_led_color_pink</item>
+    <item>@string/pref_mms_notification_led_color_orange</item>
+    <item>@string/pref_mms_notification_led_color_light_blue</item>
+  </string-array>
+
+  <string-array name="pref_mms_notification_vibrate_pattern_entries">
+    <item>Normal</item>
+    <item>Mittel</item>
+    <item>Lang</item>
+    <item>Kurz mehrmals</item>
+    <item>Lang mehrmals</item>
+  </string-array>
+
+  <string-array name="pref_mms_notification_led_blink_rate_entries">
+    <item>2 (schnell)</item>
+    <item>3</item>
+    <item>4 (mittel)</item>
+    <item>5</item>
+    <item>6 (langsam)</item>
+  </string-array>
 </resources>

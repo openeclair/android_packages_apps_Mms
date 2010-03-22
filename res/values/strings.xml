@@ -369,6 +369,11 @@
     <!-- Settings item description for boolean MMS auto-retrieve while roaming option -->
     <string name="pref_summary_mms_retrieval_during_roaming">Automatically retrieve messages while roaming</string>
 
+    <string name="pref_mms_custom_option">Custom..</string>
+    <string name="pref_title_mms_user_agent">Custom User-Agent</string>
+    <string name="pref_summary_mms_user_agent">Spoof phone as a different model for MMS</string>
+    <string name="pref_mms_user_agent_custom_set">Custom User Agent set to:\n</string> 
+
     <!-- Label prepended to recipient's name in Undelivered Messages screen -->
     <string name="to_label">"To "</string>
 
@@ -736,9 +741,19 @@
     <string name="pref_mms_notification_led_color_yellow">Yellow</string>
     <string name="pref_mms_notification_led_color_cyan">Cyan</string>
     <string name="pref_mms_notification_led_color_magenta">Magenta</string>
+    <string name="pref_mms_notification_led_color_pink">Pink</string>
+    <string name="pref_mms_notification_led_color_orange">Orange</string>
+    <string name="pref_mms_notification_led_color_light_blue">Light Blue</string>
+
+    <string name="pref_title_mms_notification_led_blink_rate">LED blink rate</string>
+    <string name="pref_summary_mms_notification_led_blink_rate">Change LED blink rate</string>
+    <string name="pref_dialogtitle_mms_notification_led_blink_rate">Select your LED blink rate</string>
 
     <string name="pref_title_mms_notification_vibrate_settings">Vibrate settings</string>
     <string name="pref_title_mms_notification_vibrate_pattern">Vibrate pattern</string>
     <string name="pref_summary_mms_notification_vibrate_pattern">Change vibrate pattern</string>
+    
+    <string name="pref_title_mms_back_to_all_threads">Back to all threads</string>
+    <string name="pref_summary_mms_back_to_all_threads">Always go to all-threads when back button is pressed</string>
 </resources>
 

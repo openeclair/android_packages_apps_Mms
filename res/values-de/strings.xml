@@ -50,6 +50,8 @@
     <string name="download" msgid="4488877642230207631">"Herunterladen"</string>
     <string name="downloading" msgid="1779557575565350637">"Ladevorgang wird ausgeführt"</string>
     <string name="name_colon" msgid="7069560650889479120"><b>"<xliff:g id="NAME">%s</xliff:g>"</b>": "</string>
+    <!-- Faruq: Hide names: -->
+    <string name="name_colon_hide">""</string>
     <string name="inline_subject" msgid="4057621785274119260">"&lt;Betreff: <xliff:g id="SUBJECT">%s</xliff:g>&gt;"</string>
     <string name="drm_protected_text" msgid="1396394157870730742">"* DRM-geschützter Text *"</string>
     <string name="insufficient_drm_rights" msgid="6989074725969164383">"Nicht ausreichende DRM-Rechte ermittelt."</string>
@@ -177,6 +179,12 @@
     <string name="pref_summary_mms_auto_retrieval" msgid="925163257363757048">"Nachrichten automatisch empfangen"</string>
     <string name="pref_title_mms_retrieval_during_roaming" msgid="6016227402731817804">"Autom. Roaming-Abruf"</string>
     <string name="pref_summary_mms_retrieval_during_roaming" msgid="2427892806582531020">"Bei Roaming Nachrichten automatisch abrufen"</string>
+
+    <string name="pref_mms_custom_option">Anpassen</string>
+    <string name="pref_title_mms_user_agent">User-Agent einstellen</string>
+    <string name="pref_summary_mms_user_agent">Gerät sich als anderes Modell ausgeben lassen (nur für MMS).</string>
+    <string name="pref_mms_user_agent_custom_set">Eingestellter User-Agent ist:\n</string>
+
     <string name="to_label" msgid="2355268818058389047">"An "</string>
     <string name="confirm_dialog_title" msgid="5810813994465120375">"Löschen"</string>
     <string name="confirm_dialog_locked_title" msgid="8179085718150932242">"Gesperrte Nachricht entfernen?"</string>
@@ -239,6 +247,7 @@
     <string name="attach_slideshow" msgid="3497422151091037063">"Diashow"</string>
     <string name="select_bottom_text" msgid="4201966447623311931">"Text unten"</string>
     <string name="select_top_text" msgid="6734183477539197815">"Text oben"</string>
+
     <string name="notification_multiple" msgid="7684007285202109490">"<xliff:g id="COUNT">%s</xliff:g> ungelesene Nachrichten"</string>
     <string name="notification_multiple_title" msgid="332602028959557541">"Neue Nachrichten"</string>
     <string name="notification_failed_multiple" msgid="4081781748475686236">"<xliff:g id="COUNT">%s</xliff:g> Nachrichten wurden nicht gesendet."</string>
@@ -307,4 +316,61 @@
     <string name="storage_limits_setting" msgid="4952781049308537373">"Grenzwerte festlegen"</string>
     <string name="storage_limits_setting_dismiss" msgid="1433841310158458034">"Keine Begrenzung"</string>
     <string name="too_many_unsent_mms" msgid="8005932837414848242">"Nachricht kann jetzt nicht gesendet werden. Es sind zu viele ungesendete Multimedia-Nachrichten vorhanden."</string>
+
+   <!-- Extra settings -->
+   <string name="pref_extra_settings">"Extra Einstellungen"</string>
+
+   <!-- Toggle setting for enable/disable Send message when Enter key pressed -->
+   <string name="pref_title_mms_send_on_enter">"Senden mit Enter"</string>
+   <string name="pref_summary_mms_send_on_enter">"Ein/Ausschalten von Nachricht senden mit Entertaste."</string>
+
+   <!-- Extra settings -->
+   <string name="pref_cosmetic_settings">"Aussehen &amp; Ästhetik"</string>
+
+   <!-- Toggle setting for enable/disable Black Background -->
+   <string name="pref_title_mms_black_background">"Schwarzer Hintergrund"</string>
+   <string name="pref_summary_mms_black_background">"Schwarzer Hintergrund in Konversationen"</string>
+
+   <!-- Pref setting for conversation font-size -->
+   <string name="pref_title_mms_conversation_font_size">"Schriftgröße"</string>
+   <string name="pref_summary_mms_conversation_font_size">"Nachrichten Schriftgröße: <xliff:g id="count">"%1$s</xliff:g>"</string>
+   <string name="pref_summary_mms_set_conversation_font_size">"Schriftgröße einstellen"</string>
+
+   <!-- Toggle for Hiding names in conversation -->
+   <string name="pref_title_conversation_hide_names">"Name ausblenden"</string>
+   <string name="pref_summary_conversation_hide_names">"Blende Namen in Konversationen aus."</string>
+
+   <!-- Toggle for Left-Right positioning in conversation -->
+   <string name="pref_title_conversation_left_right">"Wechselnde Nachricht"</string>
+   <string name="pref_summary_conversation_left_right">"Wechsle die Position der Nachrichten je nach Sender/Empfänger."</string>
+
+   <!-- Change LED color for message notification -->
+   <string name="pref_title_mms_notification_led_settings">"LED Einstellungen"</string>
+   <string name="pref_title_mms_notification_led">"LED blinken"</string>
+   <string name="pref_summary_mms_notification_led">"LED blinken lassen, wenn Nachricht empfangen wurde"</string>
+   <string name="pref_title_mms_notification_led_color">"LED-Farbe"</string>
+   <string name="pref_summary_mms_notification_led_color">"LED-Farbe ändern"</string>
+   <string name="pref_dialogtitle_mms_notification_led_color">"Wähle die LED-Farbe"</string>
+
+   <string name="pref_mms_notification_led_color_green">"Grün (Standard)"</string>
+   <string name="pref_mms_notification_led_color_white">"Weiss"</string>
+   <string name="pref_mms_notification_led_color_red">"Rot"</string>
+   <string name="pref_mms_notification_led_color_blue">"Blau"</string>
+   <string name="pref_mms_notification_led_color_yellow">"Gelb"</string>
+   <string name="pref_mms_notification_led_color_cyan">"Cyan"</string>
+   <string name="pref_mms_notification_led_color_magenta">"Magenta"</string>
+   <string name="pref_mms_notification_led_color_pink">"Pink"</string>
+   <string name="pref_mms_notification_led_color_orange">"Orange"</string>
+   <string name="pref_mms_notification_led_color_light_blue">"Hellblau"</string>
+
+   <string name="pref_title_mms_notification_led_blink_rate">"LED Blinkrate"</string>
+   <string name="pref_summary_mms_notification_led_blink_rate">"Ändere die Blinkgeschwindigkeit der LED"</string>
+   <string name="pref_dialogtitle_mms_notification_led_blink_rate">"Wähle die LED Blinkrate"</string>
+
+   <string name="pref_title_mms_notification_vibrate_settings">"Vibrationseinstellungen"</string>
+   <string name="pref_title_mms_notification_vibrate_pattern">"Vibrationsmuster"</string>
+   <string name="pref_summary_mms_notification_vibrate_pattern">"Ändere Vibrationsmuster"</string>
+
+   <string name="pref_title_mms_back_to_all_threads">"Zurück zu allen Threads"</string>
+   <string name="pref_summary_mms_back_to_all_threads">"Immer zu Alle Threads zurückgehen, wenn Zurücktaste gedrückt wird."</string>
 </resources>
