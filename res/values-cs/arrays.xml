@@ -53,4 +53,19 @@
     <item msgid="6334637439528489607">"Smějící se"</item>
     <item msgid="7602915122893958066">"Zmatený"</item>
   </string-array>
+  <string-array name="pref_mms_notification_led_blink_rate_entries">
+        <item>2 (Rychle)</item>
+        <item>3</item>
+        <item>4 (Středně)</item>
+        <item>5</item>
+        <item>6 (Pomalu)</item>
+  </string-array>
+    
+  <string-array name="pref_mms_notification_vibrate_pattern_entries">
+      <item>Normální</item>
+      <item>Střední vibrace</item>
+      <item>Dlouhé vibrace</item>
+      <item>Mnoho, krátké</item>
+      <item>Mnoho, dlouhé</item>
+  </string-array>
 </resources>

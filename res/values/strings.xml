@@ -722,10 +722,6 @@
     <string name="pref_title_conversation_hide_names">Hide Names</string>
     <string name="pref_summary_conversation_hide_names">Hide names in conversations</string>
 
-	<!-- Toggle for Left-Right positioning in conversation -->
-    <string name="pref_title_conversation_left_right">Alternate Message</string>
-    <string name="pref_summary_conversation_left_right">Alternate position of conversation according to sender/recipent</string>
-
     <!-- Change LED color for message notification -->
     <string name="pref_title_mms_notification_led_settings">LED settings</string>
     <string name="pref_title_mms_notification_led">Blink LED</string>

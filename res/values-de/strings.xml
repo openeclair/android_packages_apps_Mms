@@ -340,10 +340,6 @@
    <string name="pref_title_conversation_hide_names">"Name ausblenden"</string>
    <string name="pref_summary_conversation_hide_names">"Blende Namen in Konversationen aus."</string>
 
-   <!-- Toggle for Left-Right positioning in conversation -->
-   <string name="pref_title_conversation_left_right">"Wechselnde Nachricht"</string>
-   <string name="pref_summary_conversation_left_right">"Wechsle die Position der Nachrichten je nach Sender/Empfänger."</string>
-
    <!-- Change LED color for message notification -->
    <string name="pref_title_mms_notification_led_settings">"LED Einstellungen"</string>
    <string name="pref_title_mms_notification_led">"LED blinken"</string>

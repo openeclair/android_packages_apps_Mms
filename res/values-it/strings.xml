@@ -331,10 +331,6 @@
     <string name="pref_title_conversation_hide_names">Nascondi nomi</string>
     <string name="pref_summary_conversation_hide_names">Nascondi nomi all\'interno di una conversazione</string>
 
-	<!-- Toggle for Left-Right positioning in conversation -->
-    <string name="pref_title_conversation_left_right">Giustifica Messaggi</string>
-    <string name="pref_summary_conversation_left_right">Giustifica la posizione dei messaggi inviati da te</string>
-
     <!-- Change LED color for message notification -->
     <string name="pref_title_mms_notification_led_settings">Impostazioni LED</string>
     <string name="pref_title_mms_notification_led">Lampeggia LED</string>

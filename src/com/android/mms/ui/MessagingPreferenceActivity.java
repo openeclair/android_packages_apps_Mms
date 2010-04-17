@@ -22,7 +22,12 @@ import com.android.mms.R;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.IHardwareService;
+import android.os.RemoteException;
+import android.os.ServiceManager;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
@@ -39,7 +44,10 @@ import com.android.mms.util.Recycler;
  * With this activity, users can set preferences for MMS and SMS and
  * can access and manipulate SMS messages stored on the SIM.
  */
-public class MessagingPreferenceActivity extends PreferenceActivity {
+public class MessagingPreferenceActivity extends PreferenceActivity implements
+        Preference.OnPreferenceChangeListener {
+    private static final String TAG = "Mms";
+    
     // Symbolic names for the keys used for preference lookup
     public static final String MMS_DELIVERY_REPORT_MODE = "pref_key_mms_delivery_reports";
     public static final String EXPIRY_TIME              = "pref_key_mms_expiry";
@@ -60,7 +68,6 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
     public static final String BLACK_BACKGROUND      = "pref_key_mms_black_background";
     public static final String CONVERSATION_FONT_SIZE      = "pref_key_mms_conversation_font_size";
     public static final String CONVERSATION_HIDE_NAMES = "pref_key_conversation_hide_names";
-    public static final String CONVERSATION_LEFT_RIGHT = "pref_key_conversation_left_right";
     public static final String BACK_TO_ALL_THREADS     = "pref_key_mms_back_to_all_threads";
     public static final String USER_AGENT                   = "pref_key_mms_user_agent";
     public static final String USER_AGENT_CUSTOM            = "pref_key_mms_user_agent_custom";
@@ -72,6 +79,7 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
     private Preference mMmsLimitPref;
     private Preference mManageSimPref;
     private Preference mConversationFontSize;
+    private ListPreference mLEDColor;
     private Recycler mSmsRecycler;
     private Recycler mMmsRecycler;
 
@@ -110,6 +118,9 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
         setMmsDisplayLimit();
 
         setFontSizeDisplay();
+
+        mLEDColor = (ListPreference) findPreference("pref_key_mms_notification_led_color");
+        mLEDColor.setOnPreferenceChangeListener(this);
     }
 
     private void setSmsDisplayLimit() {
@@ -218,5 +229,20 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
                 editor.commit();
                 setFontSizeDisplay();
             }
+    };
+    
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        final String key = preference.getKey();
+        IHardwareService hardware = IHardwareService.Stub.asInterface(
+                ServiceManager.getService("hardware"));
+        if (NOTIFICATION_LED_COLOR.equals(key)) {
+            int value = Color.parseColor((String) objValue);
+            try {
+                hardware.pulseBreathingLightColor(value);
+            } catch (RemoteException re) {
+                Log.e(TAG, "could not preview LED color", re);
+            }
+        }
+        return true;
     };
 }

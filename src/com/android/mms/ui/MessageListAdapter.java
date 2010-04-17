@@ -113,7 +113,6 @@ public class MessageListAdapter extends CursorAdapter {
     private boolean mBlackBackground;
     private int mTextSize;
     private boolean mHideNames;
-    private boolean mAlternateMsg;
 
     public MessageListAdapter(
             Context context, Cursor c, ListView listView,
@@ -141,7 +140,6 @@ public class MessageListAdapter extends CursorAdapter {
         mBlackBackground = prefs.getBoolean(MessagingPreferenceActivity.BLACK_BACKGROUND, false);
         mTextSize = prefs.getInt(MessagingPreferenceActivity.CONVERSATION_FONT_SIZE, 18);
         mHideNames = prefs.getBoolean(MessagingPreferenceActivity.CONVERSATION_HIDE_NAMES, false);
-        mAlternateMsg = prefs.getBoolean(MessagingPreferenceActivity.CONVERSATION_LEFT_RIGHT, false);
     }
 
     @Override
@@ -152,7 +150,7 @@ public class MessageListAdapter extends CursorAdapter {
 
             MessageItem msgItem = getCachedMessageItem(type, msgId, cursor);
             if (msgItem != null) {
-                ((MessageListItem) view).bind(msgItem, mBlackBackground, mHideNames, mAlternateMsg);
+                ((MessageListItem) view).bind(msgItem, mBlackBackground, mHideNames);
                 ((MessageListItem) view).setMsgListItemHandler(mMsgListItemHandler);
             }
         }

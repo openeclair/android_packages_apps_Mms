@@ -136,10 +136,6 @@
 					    android:title="@string/pref_title_conversation_hide_names"
 					    android:summary="@string/pref_summary_conversation_hide_names"
 					    android:defaultValue="false" />
-	<CheckBoxPreference android:key="pref_key_conversation_left_right"
-					    android:title="@string/pref_title_conversation_left_right"
-					    android:summary="@string/pref_summary_conversation_left_right"
-					    android:defaultValue="false" />
   </PreferenceCategory>
 
   <PreferenceCategory android:title="@string/pref_extra_settings">

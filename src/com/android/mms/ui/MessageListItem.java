@@ -92,7 +92,6 @@ public class MessageListItem extends LinearLayout implements
     private MessageItem mMessageItem;
     private boolean mBlackBackground;
     private boolean mHideNames;
-    private boolean mAlternateMsg;
 
     public MessageListItem(Context context) {
         super(context);
@@ -111,11 +110,10 @@ public class MessageListItem extends LinearLayout implements
         mRightStatusIndicator = (ImageView) findViewById(R.id.right_status_indicator);
     }
 
-    public void bind(MessageItem msgItem, Boolean blackBackground, Boolean hideNames, Boolean alternateMsg) {
+    public void bind(MessageItem msgItem, Boolean blackBackground, Boolean hideNames) {
         mMessageItem = msgItem;
         mBlackBackground = blackBackground;
         mHideNames = hideNames;
-        mAlternateMsg = alternateMsg;
 
         setLongClickable(false);
 
@@ -474,7 +472,6 @@ public class MessageListItem extends LinearLayout implements
         switch (msgBoxId) {
             case Mms.MESSAGE_BOX_INBOX:
                 mMsgListItem.setBackgroundResource(mBlackBackground ? R.drawable.listitem_background_lightgrey : R.drawable.listitem_background_lightblue);
-                ((LinearLayout) mMsgListItem).setPadding(5,0,0,0);
                 break;
 
             case Mms.MESSAGE_BOX_DRAFTS:
@@ -482,16 +479,10 @@ public class MessageListItem extends LinearLayout implements
             case Sms.MESSAGE_TYPE_QUEUED:
             case Mms.MESSAGE_BOX_OUTBOX:
                 mMsgListItem.setBackgroundResource(mBlackBackground ? R.drawable.listitem_background_black : R.drawable.listitem_background);
-                if (mAlternateMsg) {
-                    ((LinearLayout) mMsgListItem).setPadding(25,0,0,0);
-                }
                 break;
 
             default:
                 mMsgListItem.setBackgroundResource(mBlackBackground ? R.drawable.listitem_background_black : R.drawable.listitem_background);
-                if (mAlternateMsg) {
-                    ((LinearLayout) mMsgListItem).setPadding(25,0,0,0);
-                }
                 break;
         }
     }

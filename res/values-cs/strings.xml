@@ -307,4 +307,64 @@
     <string name="storage_limits_setting" msgid="4952781049308537373">"Nastavit omezení"</string>
     <string name="storage_limits_setting_dismiss" msgid="1433841310158458034">"Žádná omezení"</string>
     <string name="too_many_unsent_mms" msgid="8005932837414848242">"Zprávu nyní nelze odeslat. Máte příliš mnoho neodeslaných multimediálních zpráv."</string>
+<string name="pref_mms_custom_option">Vlastní..</string>
+    <string name="pref_title_mms_user_agent">Custom User-Agent</string>
+    <string name="pref_summary_mms_user_agent">Zamaskovat telefon jako jiný model pro MMS</string>
+    <string name="pref_mms_user_agent_custom_set">Custom User Agent nastaven na:\n</string>
+<!-- Extra settings -->
+    <string name="pref_extra_settings">Extra nastavení</string>
+
+    <!-- Toggle setting for enable/disable Send message when Enter key pressed -->
+    <string name="pref_title_mms_send_on_enter">Odeslat kláv. Enter</string>
+    <string name="pref_summary_mms_send_on_enter">Zapnout/vypnout odesílání zpráv klávesou Enter</string>
+
+	<!-- Extra settings -->
+    <string name="pref_cosmetic_settings">Vzhled</string>
+
+	<!-- Toggle setting for enable/disable Black Background -->
+    <string name="pref_title_mms_black_background">Černé pozadí</string>
+    <string name="pref_summary_mms_black_background">Zapnout/vypnout černé pozadí v konverzacích</string>
+
+	<!-- Pref setting for conversation font-size -->
+    <string name="pref_title_mms_conversation_font_size">Velikost písma</string>
+    <string name="pref_summary_mms_conversation_font_size">Velikost písma zprávy: <xliff:g id="count">%1$s</xliff:g></string>
+    <string name="pref_summary_mms_set_conversation_font_size">Nastavte velikost písma</string>
+
+	<!-- Toggle for Hiding names in conversation -->
+    <string name="pref_title_conversation_hide_names">Skrýt jména</string>
+    <string name="pref_summary_conversation_hide_names">Skrýt jména v konverzacích</string>
+
+	<!-- Toggle for Left-Right positioning in conversation -->
+    <string name="pref_title_conversation_left_right">Odsazené zprávy</string>
+    <string name="pref_summary_conversation_left_right">Odsazení vašich zpráv</string>
+
+    <!-- Change LED color for message notification -->
+    <string name="pref_title_mms_notification_led_settings">Nastavení LED</string>
+    <string name="pref_title_mms_notification_led">Blikajcí LED</string>
+    <string name="pref_summary_mms_notification_led">Blikání LED při přijetí zprávy</string>
+    <string name="pref_title_mms_notification_led_color">Barva LED</string>
+    <string name="pref_summary_mms_notification_led_color">Změnit barvu LED</string>
+    <string name="pref_dialogtitle_mms_notification_led_color">Zvolte barvu pro LED</string>
+
+    <string name="pref_mms_notification_led_color_green">Zelená</string>
+    <string name="pref_mms_notification_led_color_white">Bílá</string>
+    <string name="pref_mms_notification_led_color_red">Červená</string>
+    <string name="pref_mms_notification_led_color_blue">Modrá</string>
+    <string name="pref_mms_notification_led_color_yellow">Žlutá</string>
+    <string name="pref_mms_notification_led_color_cyan">Azurová</string>
+    <string name="pref_mms_notification_led_color_magenta">Purpurová</string>
+    <string name="pref_mms_notification_led_color_pink">Růžová</string>
+    <string name="pref_mms_notification_led_color_orange">Oranžová</string>
+    <string name="pref_mms_notification_led_color_light_blue">Světle modrá</string>
+
+    <string name="pref_title_mms_notification_led_blink_rate">Rychlost blikání LED</string>
+    <string name="pref_summary_mms_notification_led_blink_rate">Změnit rychlost blikání LED</string>
+    <string name="pref_dialogtitle_mms_notification_led_blink_rate">Zvolte rychlost</string>
+
+    <string name="pref_title_mms_notification_vibrate_settings">Nastavení vibrací</string>
+    <string name="pref_title_mms_notification_vibrate_pattern">Typ vibrací</string>
+    <string name="pref_summary_mms_notification_vibrate_pattern">Změnit typ vibrací</string>
+
+    <string name="pref_title_mms_back_to_all_threads">Zpět do zpráv</string>
+    <string name="pref_summary_mms_back_to_all_threads">Vždycky na všechny zprávy po stisknutí tlačítka "Zpět"</string>
 </resources>
